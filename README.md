@@ -2,7 +2,7 @@
 
 ## ✨ Objetivo
 
-Este trabajo tiene como propósito demostrar cómo se puede mejorar código existente aplicando *corrección de errores, **modularización* y *buenas prácticas de desarrollo web*, especialmente en HTML y CSS.
+Este trabajo tiene como propósito demostrar cómo se puede mejorar código existente aplicando **corrección de errores**, **modularización** y **buenas prácticas de desarrollo web**, especialmente en HTML y CSS.
 
 ## 🚀 Cómo visualizar
 
