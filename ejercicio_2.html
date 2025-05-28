@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Transformaciones CSS</title>
+    <!-- Aqui se debe aplicar la práctica de modularizacion en este caso se deberia crear un archivo llamado
+     style.css y en este archivo adjuntar todo el codigo css-->
+    <style>
+        .rotate-box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transform: rotate(45deg);
+            transition: transform 2s;
+        }
+        
+        .rotate-box:hover {
+            transform: rotate(90deg);
+            background-color: green;
+            /*En este linea al momento de pasar el hover el cuadrado no hace la transicion que deberia,no tiene ningun tipo de color al que cambiar con el hover */ 
+            /*Además se está llamando nuevamente el "background-color" sabiendo que en el codigo de arriba ya está siendo definido */ 
+            transition: background-color 0.5s;
+        }
+        
+        .scale-box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: scale(1.5);
+            margin: 50px;
+        }
+        
+        .translate-box {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            transform: translateX(50px, 20px);
+        }
+    </style>
+</head>
+<body>
+    <div class="rotate-box"></div>
+    <div class="scale-box"></div>
+    <div class="translate-box"></div>
+</body>
+</html>

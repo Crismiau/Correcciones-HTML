@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Texto y Fuentes</title>
+    <!-- Aqui se debe aplicar la práctica de modularizacion en este caso se deberia crear un archivo llamado
+     style.css y en este archivo adjuntar todo el codigo css-->
+    <style>
+        body {
+            /*En este body no se está definiendo correctamente la fuente del archivo HTML */
+            font: Arial, sans-serif;
+            line-height: 1.5em;
+        }
+        
+        h1 {
+                font-family: "Times New Roman", Times, serif;
+            text-align: center;
+            text-decoration: underline;
+            color: #333333;
+        }
+        
+        .paragraph {
+            font-size: 16px;
+            text-align: justify;
+            letter-spacing: 1px;
+            /* En este word-spacing no se está haciendo la correcta asignación de valor debe ser word-spacing: 2px;*/
+            word-spacing 2px;
+        }
+        
+        .special {
+            font-variant: small-caps;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        
+        #quote {
+            /*Algo interesante dentro de la funcion de "quotes" dento de css es que en este caso no se muestran las comillas
+            sin embargo si quieres hacerlas aparecen en el index, puedes hacer este código:
+            #quote::before{
+                content:open-quote;
+                } 
+            #quote::after{
+                content:close-quote;
+                }*/
+            font-style: italic;
+            quotes: "«" "»";
+        }
+    </style>
+</head>
+<body>
+    <h1>Práctica de Texto y Fuentes</h1>
+    <p class="paragraph">Este es un párrafo de ejemplo que muestra cómo aplicar diferentes estilos de texto en CSS. <span class="special">Esta parte del texto tiene un estilo especial.</span></p>
+    <p id="quote">Esta es una cita importante que debería estar entre comillas especiales.</p>
+</body>
+</html>

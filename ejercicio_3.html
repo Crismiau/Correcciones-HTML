@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Selectores CSS</title>
+    <!-- Aqui se debe aplicar la práctica de modularizacion en este caso se deberia crear un archivo llamado
+     style.css y en este archivo adjuntar todo el codigo css-->
+    <style>
+        p { /* Algo a recalcar es que aca esta modificando el color a los dos p que hay dentro del div, 
+            esto pasa ya que estos div no tienen atributos y en css cuando llamas una etiqueta por su nombre
+             personalizas todas las etiquetas en tu body que tengan el mismo nombre */
+            color: blue;
+        }
+        
+        .text { 
+            color: green;
+        }
+
+        #unique {
+            color: red !important;
+        }
+        
+        /* EN este bloque de código no se está utilizando una etiqueta, ni está siendo referenciada a alguna. 
+        simplemente podriamos optar por el codigo anterior de ".text { 
+            color: green;
+        }" aca seleccionamos la etiqueta class, a comparacion del abajo, que está haciendo referencia al div, el "p" dentro del div, luego se llama la clase.
+        todo esto pudimos hacerlo con un ".text" y ya.*/
+        div p .text {
+            color: rgba(157, 37, 212, 0.425);
+        }
+        
+        div > p {
+            font-weight: bold;
+        }
+        
+        p:first-child {
+            text-decoration: underline;
+        }
+        
+        p::first-letter {
+            font-size: 200%;
+        }
+    </style>
+</head>
+<body>
+    <div> <!-- Aca no hay necesidad de definir una clase dentro de este "p" ya que se está usando el
+         "id" y cuando personalizas esta etiqueta "id" solo se relaciona el id del "p" y el "#id" de css, no se usa en ningun momento el class dentro de esta etiqueta
+         SIN EMBARGO cuando se está usando un archivo javascript si es buena practica hacer estos dos atributos dentro de esta etiqueta
+         ya que el "id" va a ser seleccionado en javascript.-->
+        <p class="text" id="unique">Este es un párrafo único</p>
+
+        <p>Este es otro párrafo</p> <!-- AZUL ESTOS DOS -->
+        <span><p>Párrafo dentro de span</p></span>
+
+    </div>
+    <p class="text">Párrafo fuera del div</p>
+</body>
+</html>
